@@ -3,23 +3,36 @@ setup = function(){
     size(400, 400); 
 };
 
-var theNumber = 100;
-
 //draw Function - will run repeatedly
 draw = function() {
-  background(255,255,255,200);
-  
-  fill(0, 0, 0);
-  textSize(30);
-  text("Analysis of: " + theNumber, 10, 36);
+  background(66,17,143);
 
-  text("It's positive", 10, 90);
-  text("It's negative", 10, 140);
-  text("It's zero", 10, 190);
+ var theNumber = 40;
 
-  noFill();
-  rect(5, 60, 200, 40); 
-};
+if (theNumber <= 50) {
+  //top left
+  fill(255, 255, 0);
+  ellipse(100, 100, 100, 100);
+}
+
+if (theNumber >= 40){
+//top right
+fill(0, 255, 255);
+ellipse(300, 100, 100, 100);
+}
+
+if (theNumber===40) {
+//bottom left
+fill(255, 25, 117);
+ellipse(300, 100, 100, 100);
+}
+
+if (theNumber!==40) {
+//bottom right
+fill(0, 255, 68);
+ellipse(300, 300, 100, 100);
+}
+}
 
 //draw Function - will run when mouseClicked
 mouseClicked = function(){
